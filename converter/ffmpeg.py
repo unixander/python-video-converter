@@ -531,7 +531,7 @@ class FFMpeg(object):
             cmds.extend([
                 '-f', 'image2', '-vframes', '1',
                 '-ss', str(thumb[0]), thumb[1],
-                '-q:v', str(FFMpeg.DEFAULT_JPEG_QUALITY if len(thumb) < 4 else str(thumb[3])),
+                #'-q:v', str(FFMpeg.DEFAULT_JPEG_QUALITY if len(thumb) < 4 else str(thumb[3])),
             ])
 
         p = self._spawn(cmds)
